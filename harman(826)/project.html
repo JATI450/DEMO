@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            Harman
+
+        </div>
+        <div class="add">
+            <img src="shopping-cart-20392.png" alt="">
+        </div>
+        <div class="item">
+            <img src="130195.png" alt="error">
+        </div>
+        <div class="find">
+            <input class="nosubmit" type="search" placeholder="Search...">
+
+        </div>
+        <div class="topnav">
+           
+            <div id="myLinks">
+                <a href="#news">Product</a>
+                <a href="contact.html">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="icon">&#9776;</i>
+            </a>
+        </div>
+    </header>
+
+    <!-- silder part -->
+
+    <div id="second">
+
+        <p>Harman</p>
+        <h1> New Collection</h1>
+        <button class="view"> <a href="all.html"> View Collection</a></button>
+    </div>
+
+    <!-- option for menu -->
+    <div class="catg">
+        <div class="cloth">
+            <a href="clothes.html"><img src="clo.jpg" alt=""></a>
+            <p class="name">clothing</p>
+        </div>
+        <div class="shoes">
+           <a href="shoes.html"> <img src="sho.jpg" alt=""></a>
+            <p class="name1">shoes</p>
+        </div>
+        <div class="accessories">
+            <img src="asc.jpeg" alt="">
+            <p class="name2">accessories</p>
+        </div>
+    </div>
+
+    <!-- top selling -->
+
+    <div class="sell">
+        <h3>TOP SELLING</h3>
+        <div class="product">
+            <img src="laptop.jpg" alt="">
+            <p>ASUS VIVIBOOK</p>
+            <span style="color: red;">$450</span>
+        </div>
+        <div class="product1">
+            <img style="width:184px" src="mi.jpg" alt="">
+            <p>MI 10i</p>
+            <span style="color: red;">$150</span>
+        </div>
+        <div class="product2">
+            <img style="width:328px" src="era.jpg" alt="">
+            <p>SAMSUNG GALAXY BUDS LIVE</p>
+            <span style="color: red;">$90</span>
+        </div>
+    </div>
+
+    <!-- img of four category -->
+
+    <div id="four">
+        <div><img src="delivery.png" alt="deilevery">
+            <h2>Fast $ Free Delivery</h2>
+            <p>Fast delivery on all orders</p>
+        </div>
+
+        <div><img src="money back.png" alt="money back">
+            <h2>Money Back Guarantee</h2>
+            <p>free delivery on all orders</p>
+        </div>
+
+        <div><img src="payment.png" alt="payment">
+            <h2>Secure Payment</h2>
+            <p>free delivery on all orders</p>
+        </div>
+
+        <div><img src="online.png" alt="online">
+            <h2>Online Support</h2>
+            <p>free delivery on all orders</p>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div id="last">
+        <div>
+            <h2>Subscribe Page</h2>
+            <form action="thanku.html" id="for" class="fromm">
+                <input class="input" id="email" type="email" placeholder="Email">
+                <button class="submit" id="submit" type="submit" alt="submit">Subscribe</button>
+                <p id="text-error"></p>
+            </form>
+        </div>
+
+        <div class="soical">
+            <div class="fb">
+                <a href="https://www.facebook.com/"><img src="fb1.png" alt=""></a>
+            </div>
+            <div class="inst">
+                <a href="https://www.instagram.com/"><img src="ist1.png" alt=""></a>
+            </div>
+        </div>
+        <hr>
+        <div class="copy">
+            <p>Copyright&#169;2022</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    document.getElementById("submit").addEventListener("click", send);
+
+    function send() {
+        const email = document.getElementById("email");
+        const iconError = document.getElementById("error");
+        if (!email.checkValidity()) {
+            document.getElementById("text-error").innerHTML = "Please provide a valid email";
+            if (!iconError.classList.contains("show")) {
+                iconError.classList.add("show");
+            }
+        } else {
+            document.getElementById("text-error").innerHTML = "";
+            if (iconError.classList.contains("show")) {
+                iconError.classList.remove("show");
+            }
+        }
+    }
+
+</script>
+
+</html>

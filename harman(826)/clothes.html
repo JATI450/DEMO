@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin-top: 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 50px;
+    }
+
+    header {
+        border: 1px solid black;
+        padding: 8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: -50px;
+
+    }
+
+    header div {
+        display: inline;
+        padding: 10px;
+
+    }
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        position: fixed;
+        display: none;
+    }
+
+    #myLinks {
+        background-color: black;
+
+
+    }
+
+    #myLinks a {
+        border: 1px solid white;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 14px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        color: white;
+        display: block;
+        display: inline-block;
+        position: fixed;
+    }
+
+    .topnav a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .active {
+        color: black;
+    }
+
+
+    .menu {
+        display: inline;
+        padding: 8px;
+
+    }
+
+    .find {
+        float: right;
+        display: inline;
+        padding-top: 0px;
+    }
+
+    .nosubmit {
+        border: none;
+        padding: 0;
+    }
+
+    input.nosubmit {
+        width: 200px;
+        height: 22px;
+        border: 1px solid #555;
+        display: block;
+        padding: 9px 4px 9px 40px;
+        background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+    }
+
+    .item {
+        float: right;
+        display: inline;
+        padding-top: 0px;
+    }
+
+    .item img {
+        width: 25px;
+        padding: 5px;
+        margin-top: -9px;
+    }
+
+    .add {
+        float: right;
+        display: inline;
+        padding-top: 0px;
+    }
+
+    .add img {
+        width: 25px;
+        /* border: 2px solid black; */
+        padding: 7px;
+        margin-top: -9px;
+    }
+
+    #start {
+        margin-left: 40%;
+        margin-top: 80px;
+        font-size: 20px;
+    }
+
+    .one1 {
+        display: grid;
+        margin-left: -450px;
+        grid-gap: 190px;
+        grid: 400px /auto auto auto auto;
+    }
+
+    .one1 img {
+        width: 240px;
+    }
+
+    .clo1 {
+        width: 260px;
+        border: 2px solid rgb(243, 238, 238);
+
+    }
+
+    .clo2 {
+        display: inline-block;
+        margin-left: -230px;
+        width: 260px;
+        border: 2px solid rgb(243, 238, 238);
+    }
+
+    .clo3 img {
+        height: 230px;
+    }
+
+    .clo3 {
+        display: inline-block;
+        margin-left: -230px;
+        width: 260px;
+        border: 2px solid rgb(243, 238, 238);
+    }
+
+    .clo4 {
+        display: inline-block;
+        margin-left: -230px;
+        width: 260px;
+        border: 2px solid rgb(243, 238, 238);
+    }
+
+    .pr {
+        text-align: center;
+    }
+
+    .sec1 {
+        display: grid;
+        margin-left: -450px;
+        grid-gap: 190px;
+        grid: 400px /auto auto auto auto;
+    }
+
+    .sec1 img {
+        width: 260px;
+    }
+
+    #last {
+        background-color: black;
+        color: white;
+        padding-top: 30px;
+        margin-left: -540px;
+        margin-top: 30px;
+    }
+
+    #last h2 {
+        margin-left: 170px;
+
+    }
+
+    .write {
+        width: 35%;
+        font-size: 18px;
+        padding-left: 90px;
+        margin-top: -30px;
+        line-height: 1.5rem;
+    }
+
+    .fromm {
+        margin-left: 100px;
+    }
+
+    #for {
+        padding-left: 4em;
+        border-color: white;
+    }
+
+    #for input {
+        height: 40px;
+        width: 30%;
+        padding: 4px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        border-color: white;
+        border: 2px solid white;
+        font-size: 18px;
+        padding-bottom: 6px;
+    }
+
+    .submit {
+        background-color: red;
+        border: 2px solid red;
+        height: 63px;
+        width: 150px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    #text-error {
+        display: block;
+        color: white;
+    }
+
+    .show {
+
+        display: block;
+    }
+
+    .soical {
+        display: flex;
+        padding-left: 180px;
+    }
+
+    .soical img {
+        width: 40px;
+        margin-left: 20px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .copy {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header>
+        <div>
+            Harman
+        </div>
+        <div class="add">
+            <img src="shopping-cart-20392.png" alt="">
+        </div>
+        <div class="item">
+            <img src="130195.png" alt="error">
+        </div>
+        <div class="find">
+            <input class="nosubmit" type="search" placeholder="Search...">
+
+        </div>
+        <div class="topnav">
+            <!-- <a href="#home" class="active"></a> -->
+            <div id="myLinks">
+                <a href="#news">Product</a>
+                <a href="contact.html">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="icon">&#9776;</i>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- img -->
+
+    <div id="start">
+        <div class="one">
+            <h2>Formal Shirts</h2>
+            <div class="one1">
+                <div class="clo1">
+                    <img src="naviblue.jpg" alt="">
+                    <p class="pr"><b>Navi Blue Formal Shit</b></p>
+                    <p class="pr">$20</p>
+                </div>
+                <div class="clo2">
+                    <img src="blue.jpg" alt="">
+                    <p class="pr"><b>Blue Formal Shit</b></p>
+                    <p class="pr">$30</p>
+                </div>
+                <div class="clo3">
+                    <img src="printed.jpg" alt="">
+                    <p class="pr"><b>Printed Formal Shit</b></p>
+                    <p class="pr">$30</p>
+                </div>
+                <div class="clo4">
+                    <img src="white.jpg" alt="">
+                    <p class="pr"><b>white Formal Shit</b></p>
+                    <p class="pr">$30</p>
+                </div>
+            </div>
+
+            <div class="second">
+                <h2>T-Shirts</h2>
+                <div class="sec1">
+                    <div class="clo1">
+                        <img src="black.jpg" alt="">
+                        <p class="pr"><b>Navi Blue Formal Shit</b></p>
+                        <p class="pr">$20</p>
+                    </div>
+                    <div class="clo2">
+                        <img src="3D tshirt.jpg" alt="">
+                        <p class="pr"><b>Blue Formal Shit</b></p>
+                        <p class="pr">$30</p>
+                    </div>
+                    <div class="clo3">
+                        <img src="neck tshirt.jpg" alt="">
+                        <p class="pr"><b>Printed Formal Shit</b></p>
+                        <p class="pr">$30</p>
+                    </div>
+                    <div class="clo4">
+                        <img src="white tshirt.jpg" alt="">
+                        <p class="pr"><b>white Formal Shit</b></p>
+                        <p class="pr">$30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="last">
+            <div>
+                <h2>Subscribe Page</h2>
+                <form action="thanku.html" id="for" class="fromm">
+                    <input class="input" id="email" type="email" placeholder="Email">
+                    <button class="submit" id="submit" type="submit" alt="submit">Subscribe</button>
+                    <p id="text-error"></p>
+                </form>
+            </div>
+
+            <div class="soical">
+                <div class="fb">
+                    <a href="https://www.facebook.com/"><img src="fb1.png" alt=""></a>
+                </div>
+                <div class="inst">
+                    <a href="https://www.instagram.com/"><img src="ist1.png" alt=""></a>
+                </div>
+            </div>
+            <hr>
+            <div class="copy">
+                <p>Copyright&#169;2022</p>
+            </div>
+        </div>
+</body>
+
+</html>
